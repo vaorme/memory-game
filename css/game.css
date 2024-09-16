@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  background-color: #252422;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+#app {
+  min-height: 100vh;
+}
+#app .logo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#app .logo a {
+  font-size: 42px;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+#app .logo a span {
+  display: block;
+  color: #EB5E28;
+  font-weight: bold;
+}
+#app .menu {
+  width: 100%;
+  max-width: 200px;
+}
+#app .menu ul li {
+  display: block;
+  margin-bottom: 20px;
+}
+#app .menu ul li:last-of-type {
+  margin-bottom: 0;
+}
+#app .main, #app .start {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#app .main {
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+#app .start {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+#app .start .logo a {
+  font-size: 32px;
+}
+#app .start .logo a span {
+  display: inline-block;
+}
+#app .start .canva {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+#app .start .start_game .cards {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+#app .start .start_game .cards .card {
+  position: relative;
+  cursor: pointer;
+  width: 110px;
+  height: 110px;
+}
+#app .start .start_game .cards .card .card_front, #app .start .start_game .cards .card .card_back {
+  position: absolute;
+  display: flex;
+  font-size: 22px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+#app .start .start_game .cards .card .card_front {
+  background-color: #434240;
+  color: #9A9A9A;
+}
+#app .start .start_game .cards .card .card_back {
+  background-color: #EB5E28;
+  color: #fff;
+  transform: rotateY(90deg);
+}
+#app .start .start_game .cards .card.flip .card_front, #app .start .start_game .cards .card.flipped .card_front {
+  transform: rotateY(90deg);
+}
+#app .start .start_game .cards .card.flip .card_back, #app .start .start_game .cards .card.flipped .card_back {
+  transform: rotateY(0deg);
+}
+#app .start .start_footer {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+#app .start .start_footer .stats {
+  display: flex;
+}
+#app .start .start_footer .stats h4 {
+  color: #CCC5B9;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+#app .start .start_footer .stats .num {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+#app .start .start_footer .stats .score {
+  margin-left: 20px;
+}
+#app .botn {
+  background-color: #CCC5B9;
+  cursor: pointer;
+  padding: 15px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #252422;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: box-shadow 0.4s ease;
+}
+#app .botn i {
+  margin-right: 6px;
+  font-size: 16px;
+}
+#app .botn:hover {
+  box-shadow: 0 0 0 5px rgba(204, 197, 185, 0.2);
+}/*# sourceMappingURL=game.css.map */

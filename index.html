@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="app">
+    <div class="main">
+        <div class="logo">
+            <a href="./">
+                memory <span>game</span>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="javascript.void(0)" class="botn startGame"><i class="fa-solid fa-play"></i> Start</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="start">
+        <div class="canva">
+            <div class="start_logo logo">
+                <a href="javascript:void(0)">
+                    memory <span>game</span>
+                </a>
+            </div>
+            <div class="start_game">
+                <div class="cards"></div>
+            </div>
+            <div class="start_footer">
+                <div class="restart">
+                    <a href="#" class="botn"><i class="fa-solid fa-arrow-rotate-left"></i> Restart</a>
+                </div>
+                <div class="stats">
+                    <div class="moves">
+                        <h4>Moves</h4>
+                        <div class="moves_num num">0</div>
+                    </div>
+                    <div class="score">
+                        <h4>Score</h4>
+                        <div class="score_num num">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/game.js"></script>
+</body>
+</html>

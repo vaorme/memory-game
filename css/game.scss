@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$color1: #252422;
+$color2: #403D39;
+$color3: #EB5E28;
+$color4: #CCC5B9;
+
+body{
+    background-color: $color1;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+a,a:hover{
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style: none;
+    }
+}
+
+#app{
+    min-height: 100vh;
+    .logo{
+        text-align: center;
+        margin-bottom: 50px;
+        a{
+            font-size: 42px;
+            color: #fff;
+            text-align: center;
+            font-weight: normal;
+            text-transform: uppercase;
+            span{
+                display: block;
+                color: $color3;
+                font-weight: bold;
+            }
+        }
+    }
+    .menu{
+        width: 100%;
+        max-width: 200px;
+        ul{
+            li{
+                display: block;
+                margin-bottom: 20px;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .main, .start{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main{
+        transition: opacity .4s ease, visibility .4s ease;
+    }
+    .start{
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s ease, visibility .4s ease;
+        .logo{
+            a{
+                font-size: 32px;
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+        .canva{
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+        }
+        .start_game{
+            .cards{
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(4, 1fr);
+                .card{
+                    position: relative;
+                    cursor: pointer;
+                    width: 110px;
+                    height: 110px;
+                    .card_front, .card_back{
+                        position: absolute;
+                        display: flex;
+                        font-size: 22px;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        transition: transform .4s ease;
+                    }
+                    .card_front{
+                        background-color: #434240;
+                        color: #9A9A9A;
+                    }
+                    .card_back{
+                        background-color: $color3;
+                        color: #fff;
+                        transform: rotateY(90deg);
+
+                    }
+                    &.flip, &.flipped{
+                        .card_front{
+                            transform: rotateY(90deg);
+                        }
+                        .card_back{
+                            transform: rotateY(0deg);
+                        }
+                    }
+                }
+            }
+        }
+        .start_footer{
+            display: flex;
+            margin-top: 60px;
+            justify-content: space-between;
+            .stats{
+                display: flex;
+                h4{
+                    color: #CCC5B9;
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                .num{
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                .score{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .botn{
+        background-color: #CCC5B9;
+        cursor: pointer;
+        padding: 15px;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #252422;
+        font-weight: 500;
+        letter-spacing: 2px;
+        border-radius: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: box-shadow .4s ease;
+        i{
+            margin-right: 6px;
+            font-size: 16px;
+        }
+        &:hover{
+            box-shadow: 0 0 0 5px rgba($color4, .2);
+        }
+    }
+}
